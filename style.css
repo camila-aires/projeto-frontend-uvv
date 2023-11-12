@@ -3,12 +3,12 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Arial, sans-serif; /* Fonte padrão para a web */
+  font-family: 'Montserrat', sans-serif;
 }
 
 body {
-  background-color: #f2f2f2; /* Cor de fundo em tons de cinza claro */
-  color: #333; /* Cor do texto padrão */
+  background-color: #f2f2f2; 
+  color: #333; 
 }
 
 header {
@@ -20,26 +20,57 @@ header img {
   display: block;
 }
 
+nav {
+  text-align: center;
+  
+}
+
 nav ul {
   list-style: none;
-  text-align: center;
-  background: rgba(0, 0, 255, 0.5); /* Fundo azul com opacidade */
-  padding: 10px 0;
+  padding: 0;
+  display: flex;
+  background-color: #001f3f; /* Cor azul escuro */
 }
 
-nav ul li {
-  display: inline;
-  margin: 0 10px;
+nav li {
+  margin: 0;
 }
 
-nav ul li a {
+nav a {
+  display: block;
   text-decoration: none;
-  color: white;
-  transition: opacity 0.5s;
+  color: #f0f0f0; /* Cor do texto em cinza claro */
+  padding: 15px 20px;
+  text-transform: uppercase; /* Texto em caixa alta */
+  font-weight: bold; /* Texto em negrito */
+  position: relative;
+  transition: color 0.3s, background-color 0.3s;
 }
 
-nav ul li a:hover {
-  opacity: 0.7; /* Opacidade reduzida ao passar o cursor */
+nav a::before {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(255, 255, 255, 0.3); /* Forma oval com opacidade de 30% */
+  transition: background-color 0.3s;
+}
+
+nav a:hover {
+  color: rgba(240, 240, 240, 0.5); /* Cor do texto com opacidade de 50% ao passar o mouse */
+}
+
+nav a:hover::before {
+  background-color: rgba(255, 255, 255, 0.5); /* Cor da forma oval com opacidade de 50% ao passar o mouse */
+}
+
+nav a:active {
+  color: #ffcc00; /* Cor amarela ao clicar */
+  background-color: #001f3f; /* Cor azul escuro ao clicar */
+}
+
+nav a:active::before {
+  background-color: #ffcc00; /* Cor da forma oval ao clicar */
 }
 
 main {
@@ -59,4 +90,205 @@ footer {
   color: white;
   padding: 25px 0;
   text-transform: uppercase; /* Transforma o texto em caixa alta */
+}
+
+.video-container {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 56.25%; /* Proporção 16:9 para o vídeo ocupar 50% da largura */
+    overflow: hidden;
+}
+
+video {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+.welcome-text {
+    color: #222; /* Cinza escuro */
+    margin-top: 20px;
+}
+
+.welcome-text h1 {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.welcome-text p {
+    font-size: 14px;
+}
+
+.video-container {
+  position: relative;
+  width: 100%;
+  max-width: 560px; /* Tamanho do vídeo */
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+
+.video-container iframe {
+  width: 100%;
+}
+
+.welcome-text {
+  color: #222; /* Cor cinza escuro */
+}
+
+.welcome-text h1 {
+  font-size: 24px;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.welcome-text p {
+  font-size: 16px;
+}
+
+.surf-history {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.surf-history h2 {
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.surf-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+.surf-info img {
+  max-width: 200px;
+  border-radius: 5px;
+}
+
+.text-info {
+  max-width: 300px;
+  text-align: left;
+}
+
+.text-info p {
+  margin-bottom: 10px;
+}
+
+.wsl-info {
+  text-align: center;
+  margin: 50px auto;
+  max-width: 600px;
+}
+
+.wsl-info h2 {
+  font-size: 24px;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.wsl-info img {
+  width: 100%;
+  max-width: 300px;
+  display: block;
+  margin: 20px auto;
+  border-radius: 5px;
+}
+
+.wsl-info p {
+  text-align: left;
+  margin-bottom: 15px;
+  font-size: 16px;
+}
+
+.newsletter-form {
+    text-align: center;
+    margin: 0 auto;
+    max-width: 40%;
+    background-color: rgba(173, 216, 230, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.newsletter-form h2 {
+    font-size: 24px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.newsletter-form p {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.newsletter-form input, .newsletter-form button {
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+}
+
+.newsletter-form button {
+    background-color: #3498db;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.newsletter-form button:hover {
+    background-color: #2980b9;
+}
+
+.newsletter-form button:active {
+    transform: scale(0.95);
+}
+
+.athletes {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.athlete {
+  width: 500px;
+  margin: 10px;
+  text-align: center;
+}
+
+.athlete img {
+  width: 200px;
+  height: 200px;
+  border-radius: 70%;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.athlete img:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.athlete .info {
+  background-color: rgba(173, 216, 230, 0.8);
+  padding: 10px;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
+.athlete h3 {
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+.athlete p {
+  font-size: 14px;
+  margin: 5px 0;
 }
