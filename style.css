@@ -1,0 +1,62 @@
+/* Reset de estilos padrão */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif; /* Fonte padrão para a web */
+}
+
+body {
+  background-color: #f2f2f2; /* Cor de fundo em tons de cinza claro */
+  color: #333; /* Cor do texto padrão */
+}
+
+header {
+  position: relative;
+}
+
+header img {
+  width: 100%;
+  display: block;
+}
+
+nav ul {
+  list-style: none;
+  text-align: center;
+  background: rgba(0, 0, 255, 0.5); /* Fundo azul com opacidade */
+  padding: 10px 0;
+}
+
+nav ul li {
+  display: inline;
+  margin: 0 10px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: white;
+  transition: opacity 0.5s;
+}
+
+nav ul li a:hover {
+  opacity: 0.7; /* Opacidade reduzida ao passar o cursor */
+}
+
+main {
+  width: 70%;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #e6e6e6; /* Fundo cinza claro para o conteúdo principal */
+}
+
+main video {
+  width: 50%;
+}
+
+footer {
+  text-align: center;
+  background: #333;
+  color: white;
+  padding: 25px 0;
+  text-transform: uppercase; /* Transforma o texto em caixa alta */
+}
